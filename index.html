@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KEEP ROCKING BRO</title>
+    <title>Welcome</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <div id="container">
-        <h1>KEEP ROCKING BRO</h1>
-        <p>Enter a serial number:</p>
-        <input type="text" id="serialNumber" placeholder="Enter serial number">
-        <button onclick="generateOutput()">Submit</button>
-        <p id="output"></p>
-    </div>
-    <script src="script.js" defer></script>
+    <div class="login-container">
+        <h1>Welcome</h1>
+        <p>Select an option to continue:</p>
 
+        <button id="userLoginBtn">👤 User Login</button>
+        <button id="adminLoginBtn">🔑 Admin Login</button>
+        <button id="onlineBookingBtn">📅 Online Booking</button> <!-- New Button -->
+    </div>
+
+    <script>
+        // Redirect when buttons are clicked
+        document.getElementById("userLoginBtn").addEventListener("click", function() {
+            window.location.href = "landing.html";
+        });
+
+        document.getElementById("adminLoginBtn").addEventListener("click", function() {
+            window.location.href = "admin.html";
+        });
+
+        document.getElementById("onlineBookingBtn").addEventListener("click", function() {
+            window.location.href = "onlinebooking.html"; // Redirect to Online Booking Page
+        });
+    </script>
 </body>
 </html>
